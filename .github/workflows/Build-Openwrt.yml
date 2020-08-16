@@ -1,4 +1,4 @@
-name: Openwrt-AutoBuild
+name: Build-OpenWRT
 
 on:
 #  release:
