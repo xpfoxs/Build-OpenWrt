@@ -57,9 +57,8 @@ jobs:
         echo "::set-env name=UPLOAD_TO_ARTIFACTS::${UPLOAD_TO_ARTIFACTS}"
         echo "::set-env name=UPLOAD_TO_REALEASE::${UPLOAD_TO_REALEASE}"
         echo "::set-env name=UPLOAD_TO_COWTRANSFER::${UPLOAD_TO_COWTRANSFER}"       
+        echo "::set-env name=UPLOAD_TO_WETRANSFER::${UPLOAD_TO_WETRANSFER}"       
         echo "::set-env name=WECHAT_NOTIFICATION::${WECHAT_NOTIFICATION}"
-        
-
         
     - name: Clone source code
       run: |
