@@ -163,13 +163,13 @@ jobs:
       if: env.UPLOAD_PACKAGES_DIR == 'true' && env.UPLOAD_TO_WETRANSFER == 'true' && !cancelled() &&  steps.compile.outputs.status == 'success'
       run: |
         curl -fsSL git.io/file-transfer | sh
-         ./transfer wet --block 2621440 -s -p 64 --no-progress openwrt/bin/${{matrix.target}}_packages.tar
+         ./transfer wet -s -p 16 --no-progress openwrt/bin/${{matrix.target}}_packages.tar
         
     - name: Upload Targetss to WeTransfer
       if: env.UPLOAD_TARGETS_DIR == 'true' && env.UPLOAD_TO_WETRANSFER == 'true' && !cancelled() &&　 steps.compile.outputs.status == 'success'
       run: |
         curl -fsSL git.io/file-transfer | sh
-         ./transfer wet --block 2621440 -s -p 64 --no-progress openwrt/bin/${{matrix.target}}_targets.tar
+         ./transfer wet -s -p 16 --no-progress openwrt/bin/${{matrix.target}}_targets.tar
          
     - name: Upload packages directory
       if: env.UPLOAD_PACKAGES_DIR == 'true' && env.UPLOAD_TO_ARTIFACTS == 'true' && !cancelled()　&& steps.compile.outputs.status == 'success'
