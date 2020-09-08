@@ -133,7 +133,10 @@ CONFIG_PACKAGE_wl12xx-firmware=m
 CONFIG_PACKAGE_wl18xx-firmware=m
 
 # 插件选择
+
+CONFIG_PACKAGE_luci-app-accesscontrol=m
 CONFIG_PACKAGE_luci-app-adblock=m
+CONFIG_PACKAGE_luci-app-adbyby-plus=m
 CONFIG_PACKAGE_luci-app-adguardhome=m
 CONFIG_PACKAGE_luci-app-advanced-reboot=m
 CONFIG_PACKAGE_luci-app-ahcp=m
@@ -143,6 +146,7 @@ CONFIG_PACKAGE_luci-app-aria2=m
 CONFIG_PACKAGE_luci-app-arpbind=m
 CONFIG_PACKAGE_luci-app-asterisk=m
 CONFIG_PACKAGE_luci-app-attendedsysupgrade=m
+CONFIG_PACKAGE_luci-app-autoreboot=m
 CONFIG_PACKAGE_luci-app-baidupcs-web=m
 CONFIG_PACKAGE_luci-app-bcp38=m
 CONFIG_PACKAGE_luci-app-bird1-ipv4=m
@@ -155,16 +159,18 @@ CONFIG_PACKAGE_luci-app-cjdns=m
 CONFIG_PACKAGE_luci-app-clamav=m
 CONFIG_PACKAGE_luci-app-commands=m
 CONFIG_PACKAGE_luci-app-control-timewol=m
-CONFIG_PACKAGE_luci-app-control-webrestriction=y
+CONFIG_PACKAGE_luci-app-control-webrestriction=m
 CONFIG_PACKAGE_luci-app-control-weburl=m
+CONFIG_PACKAGE_luci-app-cpufreq=m
 CONFIG_PACKAGE_luci-app-cshark=m
+CONFIG_PACKAGE_luci-app-ddns=m
 CONFIG_PACKAGE_luci-app-diag-core=m
-CONFIG_PACKAGE_luci-app-diskman=y
+CONFIG_PACKAGE_luci-app-diskman=m
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
 CONFIG_PACKAGE_luci-app-dnscrypt-proxy=m
 CONFIG_PACKAGE_luci-app-dnsforwarder=m
 CONFIG_PACKAGE_luci-app-docker=m
@@ -172,8 +178,10 @@ CONFIG_PACKAGE_luci-app-dump1090=m
 CONFIG_PACKAGE_luci-app-dynapoint=m
 CONFIG_PACKAGE_luci-app-e2guardian=m
 CONFIG_PACKAGE_luci-app-familycloud=m
-CONFIG_PACKAGE_luci-app-fileassistant=y
-CONFIG_PACKAGE_luci-app-filebrowser=y
+CONFIG_PACKAGE_luci-app-fileassistant=m
+CONFIG_PACKAGE_luci-app-filebrowser=m
+CONFIG_PACKAGE_luci-app-filetransfer=m
+CONFIG_PACKAGE_luci-app-firewall=y
 CONFIG_PACKAGE_luci-app-flowoffload=m
 CONFIG_PACKAGE_luci-app-freifunk-diagnostics=m
 CONFIG_PACKAGE_luci-app-freifunk-policyrouting=m
@@ -182,7 +190,7 @@ CONFIG_PACKAGE_luci-app-frpc=m
 CONFIG_PACKAGE_luci-app-frps=m
 CONFIG_PACKAGE_luci-app-fwknopd=m
 CONFIG_PACKAGE_luci-app-guest-wifi=m
-CONFIG_PACKAGE_luci-app-haproxy-tcp=y
+CONFIG_PACKAGE_luci-app-haproxy-tcp=m
 CONFIG_PACKAGE_luci-app-hd-idle=m
 CONFIG_PACKAGE_luci-app-hnet=m
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=m
@@ -202,6 +210,7 @@ CONFIG_PACKAGE_luci-app-netkeeper-interception=m
 CONFIG_PACKAGE_luci-app-nfs=m
 CONFIG_PACKAGE_luci-app-nft-qos=m
 CONFIG_PACKAGE_luci-app-nginx-pingos=m
+CONFIG_PACKAGE_luci-app-nlbwmon=m
 CONFIG_PACKAGE_luci-app-noddos=m
 CONFIG_PACKAGE_luci-app-nps=m
 CONFIG_PACKAGE_luci-app-ntpc=m
@@ -216,15 +225,24 @@ CONFIG_PACKAGE_luci-app-openvpn-server=m
 CONFIG_PACKAGE_luci-app-p910nd=m
 CONFIG_PACKAGE_luci-app-pagekitec=m
 CONFIG_PACKAGE_luci-app-passwall=m
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Server is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus is not set
+
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ipt2socks=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Server=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG is not set
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_pdnsd=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_https_dns_proxy is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin is not set
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs is not set
+
 CONFIG_PACKAGE_luci-app-polipo=m
 CONFIG_PACKAGE_luci-app-pppoe-relay=m
 CONFIG_PACKAGE_luci-app-pppoe-server=m
@@ -234,11 +252,16 @@ CONFIG_PACKAGE_luci-app-ps3netsrv=m
 CONFIG_PACKAGE_luci-app-qbittorrent=m
 CONFIG_PACKAGE_luci-app-qos=m
 CONFIG_PACKAGE_luci-app-radicale=m
+CONFIG_PACKAGE_luci-app-ramfree=m
 CONFIG_PACKAGE_luci-app-rclone=m
+CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=y
+CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=y
+CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=y
 CONFIG_PACKAGE_luci-app-rp-pppoe-server=m
 CONFIG_PACKAGE_luci-app-samba=m
 CONFIG_PACKAGE_luci-app-samba4=m
 CONFIG_PACKAGE_luci-app-serverchan=m
+CONFIG_PACKAGE_luci-app-sfe=m
 CONFIG_PACKAGE_luci-app-shadowsocks-libev=m
 CONFIG_PACKAGE_luci-app-shairplay=m
 CONFIG_PACKAGE_luci-app-siitwizard=m
@@ -249,12 +272,14 @@ CONFIG_PACKAGE_luci-app-splash=m
 CONFIG_PACKAGE_luci-app-sqm=m
 CONFIG_PACKAGE_luci-app-squid=m
 CONFIG_PACKAGE_luci-app-ssr-libev-server=m
-CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2 is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
+CONFIG_PACKAGE_luci-app-ssr-mudb-server=m
+CONFIG_PACKAGE_luci-app-ssr-plus=m
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2 is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server is not set
 CONFIG_PACKAGE_luci-app-ssrserver-python=m
 CONFIG_PACKAGE_luci-app-statistics=m
 CONFIG_PACKAGE_luci-app-syncdial=m
@@ -264,113 +289,30 @@ CONFIG_PACKAGE_luci-app-tinyproxy=m
 CONFIG_PACKAGE_luci-app-transmission=m
 CONFIG_PACKAGE_luci-app-travelmate=m
 CONFIG_PACKAGE_luci-app-trojan-server=m
-CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-udpxy=y
+CONFIG_PACKAGE_luci-app-ttyd=m
+CONFIG_PACKAGE_luci-app-udpxy=m
 CONFIG_PACKAGE_luci-app-uhttpd=m
+CONFIG_PACKAGE_luci-app-unblockmusic=m
+# CONFIG_UnblockNeteaseMusic_Go is not set
+# CONFIG_UnblockNeteaseMusic_NodeJS is not set
 CONFIG_PACKAGE_luci-app-unbound=m
+CONFIG_PACKAGE_luci-app-upnp=m
 CONFIG_PACKAGE_luci-app-usb-printer=m
-CONFIG_PACKAGE_luci-app-v2ray-server=y
+CONFIG_PACKAGE_luci-app-v2ray-server=m
 CONFIG_PACKAGE_luci-app-verysync=m
 CONFIG_PACKAGE_luci-app-vlmcsd=m
 CONFIG_PACKAGE_luci-app-vnstat=m
 CONFIG_PACKAGE_luci-app-vpnbypass=m
 CONFIG_PACKAGE_luci-app-vsftpd=m
 CONFIG_PACKAGE_luci-app-watchcat=m
+CONFIG_PACKAGE_luci-app-webadmin=m
 CONFIG_PACKAGE_luci-app-wifischedule=m
 CONFIG_PACKAGE_luci-app-wireguard=m
 CONFIG_PACKAGE_luci-app-wol=m
-CONFIG_PACKAGE_luci-app-wrtbwmon=y
+CONFIG_PACKAGE_luci-app-wrtbwmon=m
 CONFIG_PACKAGE_luci-app-xlnetacc=m
-CONFIG_PACKAGE_luci-i18n-adblock-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-advanced-reboot-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ahcp-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-amule-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-asterisk-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-bcp38-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-brook-server-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-cifs-mount-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-cifsd-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-clamav-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-commands-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-control-timewol-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-control-webrestriction-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-control-weburl-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-diag-core-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-docker-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-filebrowser-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-freifunk-policyrouting-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-freifunk-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-frps-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-guest-wifi-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-haproxy-tcp-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ipsec-vpnd-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ipsec-vpnserver-manyusers-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-kcptun-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-kodexplorer-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-meshwizard-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-minidlna-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-mjpg-streamer-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-n2n_v2-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-netkeeper-interception-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-netkeeper-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-nfs-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-nps-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ntpc-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-olsr-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-p910nd-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-polipo-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-pppoe-relay-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-pppoe-server-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-pptp-vpnserver-manyusers-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-privoxy-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ps3netsrv-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-qos-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-rclone-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-samba-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-splash-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-sqm-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ssr-libev-server-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ssr-mudb-server-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-ssrserver-python-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-statistics-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-syncthing-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-timecontrol-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-tinyproxy-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-transmission-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-trojan-server-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-uhttpd-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-verysync-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-vnstat-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-vpnbypass-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-wifischedule-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-wol-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
+CONFIG_PACKAGE_luci-app-zerotier=m
+CONFIG_PACKAGE_luci-app-https-dns-proxy=y
 
 
 # 主题
