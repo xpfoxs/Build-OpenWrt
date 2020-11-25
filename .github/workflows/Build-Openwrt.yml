@@ -34,7 +34,7 @@ jobs:
     - name: Set Date
       run: |
          date=$(date +%Y-%m-%d)
-         echo "::set-env name=DATE::$date"
+         echo "::set-output name=DATE::$date"
                  
     - name: Initialization environment
       env:
@@ -49,15 +49,15 @@ jobs:
     - name: Load Settings.ini
       run: |    
         source "${GITHUB_WORKSPACE}/user/${{matrix.target}}/settings.ini"
-        echo "::set-env name=REPO_URL::${REPO_URL}"
-        echo "::set-env name=REPO_BRANCH::${REPO_BRANCH}"
-        echo "::set-env name=UPLOAD_PACKAGES_DIR::${UPLOAD_PACKAGES_DIR}"
-        echo "::set-env name=UPLOAD_TARGETS_DIR::${UPLOAD_TARGETS_DIR}"        
-        echo "::set-env name=UPLOAD_FIRMWARE::${UPLOAD_FIRMWARE}"        
-        echo "::set-env name=UPLOAD_TO_ARTIFACTS::${UPLOAD_TO_ARTIFACTS}"
-        echo "::set-env name=UPLOAD_TO_COWTRANSFER::${UPLOAD_TO_COWTRANSFER}"       
-        echo "::set-env name=UPLOAD_TO_WETRANSFER::${UPLOAD_TO_WETRANSFER}"       
-        echo "::set-env name=WECHAT_NOTIFICATION::${WECHAT_NOTIFICATION}"
+        echo "::set-output name=REPO_URL::${REPO_URL}"
+        echo "::set-output name=REPO_BRANCH::${REPO_BRANCH}"
+        echo "::set-output name=UPLOAD_PACKAGES_DIR::${UPLOAD_PACKAGES_DIR}"
+        echo "::set-output name=UPLOAD_TARGETS_DIR::${UPLOAD_TARGETS_DIR}"        
+        echo "::set-output name=UPLOAD_FIRMWARE::${UPLOAD_FIRMWARE}"        
+        echo "::set-output name=UPLOAD_TO_ARTIFACTS::${UPLOAD_TO_ARTIFACTS}"
+        echo "::set-output name=UPLOAD_TO_COWTRANSFER::${UPLOAD_TO_COWTRANSFER}"       
+        echo "::set-output name=UPLOAD_TO_WETRANSFER::${UPLOAD_TO_WETRANSFER}"       
+        echo "::set-output name=WECHAT_NOTIFICATION::${WECHAT_NOTIFICATION}"
         
     - name: Clone source code
       run: |
